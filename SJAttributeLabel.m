@@ -121,7 +121,7 @@
     
     CGPoint startDrawPoint = CGPointMake(drawRect.origin.x + beforeDrawSize.width, drawRect.origin.y);
     CGSize size = wantDrawsize;
-    if (beforeDrawSize.width + wantDrawsize.width >= drawRect.size.width) {
+    if (beforeDrawSize.width + wantDrawsize.width  + drawRect.origin.x > self.bounds.size.width) {
         
         size = CGSizeMake(drawRect.size.width - beforeDrawSize.width,drawRect.size.height);
     }
