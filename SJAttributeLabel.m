@@ -148,7 +148,7 @@
 
 -(CGRect) getWholeTextDrawRect
 {
-    CGSize constrainedSize = [[UIScreen mainScreen] bounds].size;
+    CGSize constrainedSize = self.frame.size;
     CGSize drawSize = [self.text sizeWithFont:self.font constrainedToSize:constrainedSize lineBreakMode:self.lineBreakMode];
     CGPoint center = {CGRectGetWidth(self.frame) / 2,CGRectGetHeight(self.frame)/2};
     CGRect rect = CGRectZero;
